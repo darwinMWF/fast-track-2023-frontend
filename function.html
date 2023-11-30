@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function with no args
+      //   function greet() {
+      //     alert("Hello");
+      //     console.log("Hello");
+      //     alert("hi");
+      //   }
+      //   greet();
+
+      //   function greet(gender, name) {
+      //     if (gender === "male") {
+      //       alert("Good Morning Mr. " + name);
+      //     } else {
+      //       alert("Good Morning Miss. " + name);
+      //     }
+      //   }
+
+      //   function greet(gender = "female", name = "Superman") {
+      //     if (gender === "male") {
+      //       alert("Good Morning Mr. " + name);
+      //     } else {
+      //       alert("Good Morning Miss. " + name);
+      //     }
+      //   }
+
+      //   greet();
+
+      function sum(...nos) {
+        // console.log(args);
+        let total = 0;
+        for (i = 0; i < nos.length; i++) {
+          total = total + nos[i];
+        }
+        return total;
+        alert("Hello INDIA");
+      }
+      const total = sum(10, 20, 20);
+    </script>
+  </body>
+</html>

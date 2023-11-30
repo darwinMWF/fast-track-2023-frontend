@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo">0</div>
+    <button onclick="increment()">+</button>
+    <button onclick="decrement()">-</button>
+    <script>
+      function increment() {
+        let counting = document.getElementById("demo").innerHTML;
+        // console.log(typeof counting);
+        // console.log(typeof 0);
+        let newCnt = Number(counting) + 1;
+        if (newCnt <= 10) {
+          document.getElementById("demo").innerHTML = newCnt;
+        }
+      }
+      function decrement() {
+        let counting = document.getElementById("demo").innerHTML;
+        // console.log(typeof counting);
+        // console.log(typeof 0);
+        let newCnt = Number(counting) - 1;
+        document.getElementById("demo").innerHTML = newCnt;
+      }
+    </script>
+  </body>
+</html>

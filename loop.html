@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="test"></ul>
+    <script>
+      // initialization, condition checking, increment/decrement
+      //   for (i = 3; i <= 30; i = i + 3) {
+      //     console.log(i);
+      //   }
+
+      //   for (i = 1; i <= 3; i++) {
+      //     console.log(i);
+      //     for (j = 1; j <= 3; j++) {
+      //       console.log("JS");
+      //       for (x = 1; x <= 2; x++) {
+      //         console.log("x");
+      //       }
+      //     }
+      //   }
+
+      // 1
+      // JS JS JS
+      //2
+      // JS JS JS
+      //3
+      // JS JS JS
+      let names = ["vijay", "ramesh", "darwin", "tech"];
+
+      // i++
+      // i = i + 1;
+
+      let ele = "";
+      for (a = 0; a < 4; a++) {
+        ele += "<li>" + names[a] + "</li>";
+      }
+
+      // console.log(ele);
+      document.getElementById("test").innerHTML = ele;
+
+      //   for (i = 0; i < names.length; i++) {
+      //     // document.writeln(names[i]);
+      //     document.getElementById("test").innerHTML +=
+      //       "<li>" + names[i] + "</li>";
+      //   }
+
+      // names.map(function (name, index) {
+      //   document.getElementById("test").innerHTML += "<li>" + name + "</li>";
+      // });
+
+      for (x = 1; x <= 3; x++) {
+        console.log("X:", x);
+        for (y = 1; y <= 3; y++) {
+          console.log("Y:", y);
+        }
+      }
+      if (1 === 1) {
+        console.log("YES");
+        console.log("YES");
+      }
+      //
+    </script>
+  </body>
+</html>
