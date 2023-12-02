@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation</title>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="get" onsubmit="submitHandler(event)">
+      <input type="text" placeholder="Enter Name" name="name" id="name" />
+      <div class="error"></div>
+      <input
+        type="number"
+        placeholder="Enter contact"
+        name="contact"
+        id="contact"
+      />
+      <div class="error contact"></div>
+
+      <button type="submit">ADD</button>
+    </form>
+    <script>
+      function submitHandler(e) {
+        // e.preventDefault();
+        // let name = document.getElementById("name").value;
+        // if (name === "") {
+        //   //   alert("name field is required!");
+        //   document.getElementById("name").focus();
+        //   document.getElementById("name").style.border = "1px solid red";
+        //   document.getElementsByClassName("error")[0].innerHTML =
+        //     "<b>Please enter name</b>";
+        // } else {
+        //   document.getElementById("name").style.border = "1px solid gray";
+        //   document.getElementsByClassName("error")[0].innerHTML = "";
+        // }
+        e.preventDefault();
+        // let input = document.getElementById("name");
+        // let error = document.getElementsByClassName("error")[0];
+        // if (input.value === "") {
+        //   //   alert("name field is required!");
+        //   input.focus();
+        //   input.style.border = "1px solid red";
+        //   error.innerHTML = "<b>Please enter name</b>";
+        // } else {
+        //   input.style.border = "1px solid gray";
+        //   error.innerHTML = "";
+        // }
+        let contact = document.getElementById("contact");
+        let error1 = document.getElementsByClassName("error")[1];
+        if (contact.value === "") {
+          //   alert("name field is required!");
+          contact.focus();
+          contact.style.border = "1px solid red";
+          error1.innerHTML = "<b>Please enter contact</b>";
+        } else if (!/^\d{10}$/.test(contact.value)) {
+          // pattern REGEX  - Regular Expression
+          error1.innerHTML =
+            "<b>Contact must be 10 digits, you entered " +
+            contact.value.length +
+            " digits</b>";
+        } else {
+          contact.style.border = "1px solid gray";
+          error1.innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>
